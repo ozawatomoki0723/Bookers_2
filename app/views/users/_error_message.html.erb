@@ -1,0 +1,13 @@
+<div class='errors-ms'>
+<% if obj.errors.any? %>
+  <h4><%= current_user.errors.count %>errors prohibited obj from being saved:</h4>
+
+  <div id="error_explanation">
+    <ul>
+      <% obj.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+</div>

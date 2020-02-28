@@ -1,0 +1,35 @@
+<div class='body'>
+  <div class='conteiner'>
+    <p id='notice'></p>
+    <div clsaa='row'>
+      <div class='user-edit col-md-offset-1 col-md-6'>
+
+        <div class='row'>
+        <h1>User info</h1></br>
+        <%= form_for(@user) do |f| %>
+        <%= render 'users/error_messages', obj: @user %>
+        <div class='filed'>
+        <label for='user_name'>Name</label>
+        <%= f.text_field :name %>
+        </div></br>
+        <div class='filed'>
+        <label for='user_image'>Image</label>
+        <%= f.attachment_field :profile_image %>
+        </div><br/>
+        <div class='filed'>
+        <label for='user_introduction'>Introduction</label>
+        <%= f.text_area :introduction %>
+        </div><br/>
+        <div class='actions'>
+        <!-- <br><%= f.submit 'Update User' %></br> -->
+        <input class='btn btn-default' type='submit' value='Update User'>
+        </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <%= render 'temple/footer' %>
+</footer>
